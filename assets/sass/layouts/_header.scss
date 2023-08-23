@@ -1,0 +1,63 @@
+.header-area{ 
+
+    .navbar{
+        @include media-breakpoint-between(sm, xl){
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        &-brand{
+            margin-right: 1rem;
+            @include media-breakpoint-up(xl){
+                margin-right: 2rem;
+            }
+            .custom-logo{
+                @include media-breakpoint-down(xl){
+                    width: auto;
+                    height: 53px;
+                }
+            }
+        }
+
+        &-right{
+            @include media-breakpoint-down(xl){
+                display: none;
+            }
+        }
+    }
+
+    &.is-sticky{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 998;
+    }
+
+    &.is-fixed{
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 998;
+    }
+
+    .navbar-toggler{
+        display: inline-flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 8px;
+        background-color: transparent;
+        border: 0;
+        outline: none;
+        padding: 0px;
+        margin-left: 1.5rem;
+
+        span{
+            display: block;
+            width: 35px;
+            height: 3px;
+            background-color: var(--navbar-base-color, $white);
+        }
+    }
+}

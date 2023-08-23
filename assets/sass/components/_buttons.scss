@@ -1,0 +1,111 @@
+.btn {
+    --btn-padding-x: 1.85rem;
+    --btn-padding-y: 0.8rem;
+    --btn-font-family: ;
+    --btn-font-size: 15px;
+    --btn-font-weight: 500;
+    --btn-line-height: 1.5;
+    --btn-color: var(--body-color);
+    --btn-bg: transparent;
+    --btn-border-width: 1px;
+    --btn-border-color: transparent;
+    --btn-border-radius: 15px;
+    --btn-hover-border-color: transparent;
+    --btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 1px rgba(0, 0, 0, 0.075);
+    --btn-disabled-opacity: 0.65;
+    --btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--btn-focus-shadow-rgb), .5);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: var(--btn-padding-y) var(--btn-padding-x);
+    font-family: var(--btn-font-family);
+    font-size: var(--btn-font-size);
+    font-weight: var(--btn-font-weight);
+    line-height: var(--btn-line-height);
+    color: var(--btn-color);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: var(--btn-border-width) solid var(--btn-border-color);
+    border-radius: var(--btn-border-radius);
+    background-color: var(--btn-bg);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+
+    &-primary{
+        background-color: $primary;
+        color: $white;
+
+        &:hover{
+            background-color: darken($primary, 8%);
+        }
+    }
+
+    &-success{
+        background-color: $success;
+        color: $black;
+
+        &:hover{
+            background-color: darken($success, 8%);
+        }
+    }
+
+    &-info{
+        background-color: $info;
+        color: $dark;
+
+        &:hover{
+            background-color: darken($info, 8%);
+        }
+    }
+    &-light{
+        background-color: $color-grey-50;
+        color: $dark;
+
+        &:hover{
+            background-color: darken($color-grey-50, 8%);
+        }
+    }
+    &-outline-dark{
+        border-color: $dark;
+        background-color: transparent;
+        color: $dark;
+
+        &:hover{
+            background-color: $dark;
+            color: $white;
+        }
+    }
+    &-outline-primary{
+        border-color: $primary;
+        background-color: transparent;
+        color: $primary;
+
+        &:hover{
+            background-color: $primary;
+            color: $white;
+        }
+    }
+    &-outline-success{
+        border-color: $success;
+        background-color: transparent;
+        color: $success;
+
+        &:hover{
+            background-color: $success;
+            color: $white;
+        }
+    }
+
+    &-group{
+        display: flex;
+        align-items: stretch;
+        gap: 30px;
+    }
+}
+

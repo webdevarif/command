@@ -1,0 +1,106 @@
+$prefix: df- !default;
+
+// Font Family
+$ff-primary: 'Poppins', sans-serif;
+
+// Font Sizes
+$fs-sm: 12px;
+$fs-md: 14px;
+$fs-lg: 16px;
+$fs-xl: 20px;
+
+
+$h1-font-size:                $fs-md * 2.5 !default;
+$h2-font-size:                $fs-md * 2 !default;
+$h3-font-size:                $fs-md * 1.75 !default;
+$h4-font-size:                $fs-md * 1.5 !default;
+$h5-font-size:                $fs-md * 1.25 !default;
+$h6-font-size:                $fs-md !default;
+
+// scss-docs-start font-sizes
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size
+) !default;
+// scss-docs-end font-sizes
+
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;
+
+$alpha: (
+  0: 0,
+  10: 0.10,
+  25: 0.25,
+  50: 0.5,
+  75: 0.75,
+  100: 1,
+) !default;
+
+// Colors
+$primary: #FFCF14;
+$success: #88BF7F;
+$info: #CEE3F2;
+$white: #fff;
+$color-grey-50: #fbfbfb;
+$color-grey-100: #f1f5f9;
+$color-grey-200: #e2e8f0;
+$color-grey-300: #cbd5e1;
+$color-grey-400: #94a3b8;
+$color-grey-500: #64748b;
+$color-grey-600: #475569;
+$color-grey-700: #334155;
+$color-grey-800: #1e293b;
+$color-grey-900: #0f172a;
+$color-grey-1000: #020617;
+$dark: $color-grey-800;
+$black: #000;
+
+// List Colors
+$list-colors: (
+    'primary': $primary,
+    'success': $success,
+    'info': $success,
+    'white': $white,
+    'grey-50': $color-grey-50,
+    'grey-100': $color-grey-100,
+    'grey-200': $color-grey-200,
+    'grey-300': $color-grey-300,
+    'grey-400': $color-grey-400,
+    'grey-500': $color-grey-500,
+    'grey-600': $color-grey-600,
+    'grey-700': $color-grey-700,
+    'grey-800': $color-grey-800,
+    'grey-900': $color-grey-900,
+    'grey-1000': $color-grey-1000,
+    'light': $color-grey-50,
+    'dark': $dark,
+    'black': $black,
+);
+
+// A map of breakpoints.
+$grid-breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+:root {
+  @each $name, $color in $list-colors {
+    --color-#{$name}: #{$color};
+    --color-rgb-#{$name}: #{hexToRgb($color)};
+  }
+}
+

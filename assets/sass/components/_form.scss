@@ -1,0 +1,23 @@
+.form-group{
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.65rem 1.75rem;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.75;
+    color: var(--body-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    background-color: var(--body-bg, $white);
+    background-clip: padding-box;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius, 50px);
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}

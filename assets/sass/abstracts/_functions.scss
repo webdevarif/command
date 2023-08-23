@@ -1,0 +1,36 @@
+@use 'sass:math';
+
+// Function for converting a px based font-size to rem.
+@function rem($size) {
+    @return math.div($size, 16px) * 1rem;
+}
+
+
+// Define the breakpoint-infix function
+@function breakpoint-infix($breakpoint, $breakpoint-map) {
+  $index: index(map-keys($breakpoint-map), $breakpoint);
+  $breakpoints-length: length(map-keys($breakpoint-map));
+  
+  $prev-breakpoint: null;
+  $next-breakpoint: null;
+  
+  // Find the previous and next breakpoints
+  @if $index > 1 {
+    $prev-breakpoint: nth(map-keys($breakpoint-map), $index - 1);
+  }
+  @if $index < $breakpoints-length {
+    $next-breakpoint: nth(map-keys($breakpoint-map), $index + 1);
+  }
+  
+  $infix: '';
+  
+  // Add infix based on previous and next breakpoints
+  @if $prev-breakpoint {
+    $infix: '#{$infix}-#{ $prev-breakpoint }';
+  }
+  @if $next-breakpoint {
+    $infix: '#{$infix}-#{ $next-breakpoint }';
+  }
+  
+  @return $infix;
+}

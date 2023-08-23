@@ -1,0 +1,32 @@
+.w-100{
+    width: 100% !important;
+}
+
+.rounded{
+    border-radius: 0.25rem !important;
+
+    &-sm{
+        border-radius: 10px !important;
+    }
+}
+
+.mb-5{
+    margin-bottom: 40px;
+}
+
+.link{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 16px;
+    transition: 0.2s ease-in-out;
+    outline: none;
+
+    &-secondary{
+        color: $color-grey-600;
+
+        &:hover{
+            color: $black;
+        }
+    }
+
+}
