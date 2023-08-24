@@ -82,20 +82,22 @@
 
             <div class="custom-container">
                 <div class="page-wrapper">
-                    <aside class="sidebar" style="background: url('../assets/svg/Sidebar.svg') bottom left/cover;">
-                        <ul class="sidebar-menu list-unstyled">
-                            <li><a href="#"><img src="../assets/svg/icons8-fast-food-64.svg" alt=""> <span>Menusv</span></a></li>
-                            <li><a href="#"><img src="../assets/svg/hamburger.svg" alt="">  <span>Burgers</span></a></li>
-                            <li><a href="#"><img src="../assets/svg/icons8-soda-48.svg" alt="">  <span>Drinks</span></a></li>
-                            <li><a href="#"><img src="../assets/svg/icons8-fast-food-64-2.svg" alt="">  <span>Snacks</span></a></li>
-                            <li><a href="#"><img src="../assets/svg/hamburger2.svg" alt="">  <span>Salads</span></a></li>
-                            <li><a href="#"><img src="../assets/svg/icons8-soda-48-2.svg" alt="">  <span>Fries</span></a></li>
-                            <li><a href="#"><img src="../assets/svg/icons8-fast-food-64-3.svg" alt="">  <span>Breakfast</span></a></li>
-                            <li><a href="#"><img src="../assets/svg/hamburger3.svg" alt="">  <span>McCafé</span></a></li>
-                            <li><a href="#"><img src="../assets/svg/icons8-soda-48-3.svg" alt="">  <span>Sauces</span></a></li>
-                            <li><a href="#"><img src="../assets/svg/icons8-soda-48-4.svg" alt="">  <span>More</span></a></li>
-                        </ul>
-                    </aside>
+                    <div class="sidebar-area">
+                        <aside class="sidebar js-sticky-widget" style="background: url('../assets/svg/Sidebar.svg') bottom left/cover;">
+                            <ul class="sidebar-menu list-unstyled">
+                                <li><a href="#"><img src="../assets/svg/icons8-fast-food-64.svg" alt=""> <span>Menusv</span></a></li>
+                                <li><a href="#"><img src="../assets/svg/hamburger.svg" alt="">  <span>Burgers</span></a></li>
+                                <li><a href="#"><img src="../assets/svg/icons8-soda-48.svg" alt="">  <span>Drinks</span></a></li>
+                                <li><a href="#"><img src="../assets/svg/icons8-fast-food-64-2.svg" alt="">  <span>Snacks</span></a></li>
+                                <li><a href="#"><img src="../assets/svg/hamburger2.svg" alt="">  <span>Salads</span></a></li>
+                                <li><a href="#"><img src="../assets/svg/icons8-soda-48-2.svg" alt="">  <span>Fries</span></a></li>
+                                <li><a href="#"><img src="../assets/svg/icons8-fast-food-64-3.svg" alt="">  <span>Breakfast</span></a></li>
+                                <li><a href="#"><img src="../assets/svg/hamburger3.svg" alt="">  <span>McCafé</span></a></li>
+                                <li><a href="#"><img src="../assets/svg/icons8-soda-48-3.svg" alt="">  <span>Sauces</span></a></li>
+                                <li><a href="#"><img src="../assets/svg/icons8-soda-48-4.svg" alt="">  <span>More</span></a></li>
+                            </ul>
+                        </aside>
+                    </div>
                     <div class="page-content">
                         <!-- Grid System -->
                         <div class="mb-5">
@@ -611,6 +613,18 @@
     </div>
     <!-- end Modal -->
 
+    <script src="https://cdn.jsdelivr.net/npm/sticksy/dist/sticksy.min.js"></script>
+    <script>
+        var stickyElement = new Sticksy('.js-sticky-widget', {topSpacing: 120});
+        // you can handle state changing
+        stickyEl.onStateChanged = function (state) {
+            if(state === 'fixed') {
+                stickyEl.nodeRef.classList.add('widget--sticky')
+            } else {
+                stickyEl.nodeRef.classList.remove('widget--sticky')
+            }
+        }
+    </script>
     <script src="../assets/js/slick.js"></script>
     <script src="../assets/js/main.js"></script>
 </body>
